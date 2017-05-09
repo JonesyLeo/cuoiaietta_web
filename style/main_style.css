@@ -1,0 +1,278 @@
+/* CSS Document */
+
+
+@import url('https://fonts.googleapis.com/css?family=Inknut+Antiqua|La+Belle+Aurore');
+
+
+body{
+	margin:0;
+	
+	position:relative;
+	
+	background-image:url(../img/cherry-wood.jpg);
+	background-position:center center;
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+
+#testata{
+	
+	z-index: 100;
+	position:relative;
+	
+	width: 100%;
+	position:fixed;
+	height: 90px;
+	background-image:url(../img/cherry-wood.jpg);
+	background-position:bottom center;
+	background-size:cover;
+	
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+	
+}
+
+
+
+#librotoggle, #dantetoggle{
+	
+	height:70px;
+	width: 70px;
+	background-color:rgba(255,255,255,0.4);
+	border: 2px solid #333;	
+	position: absolute;
+	border-radius:6px;
+}
+
+
+
+
+#librotoggle{
+	left: 20px;
+    top: 7px;
+}
+
+
+#dantetoggle{
+	right: 20px;
+    top: 7px;
+}
+
+
+#menulibro, #menudante{
+	height:400px;
+	width: 200px;
+	position: absolute;
+	transition-duration:0.7s;
+	top:90px;
+	padding: 21px;
+	line-height:2em;
+}
+
+#menulibro table, #menudante table{
+	color:#FFC;
+	font-size:1.3em;
+	font-family:'Inknut Antiqua', serif;
+}
+
+
+#menulibro{
+	left:0px;
+}
+
+
+#menudante{
+	right:0px;
+}
+
+
+
+
+
+
+
+#commedia {
+	
+    margin: 0 auto;
+	position: relative;
+	
+    width: 720px;
+	padding: 90px 60px 0px 60px;
+
+    background-image: url(../img/Book-Page.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: calc(100% - 90px);
+	
+    box-shadow: 0px 0px 80px 10px rgba(0,0,0,1);
+}
+
+
+#comandicommedia {
+    font-family: sans-serif;
+    position: absolute;
+    right: 16px;
+    font-size: 44px;
+    font-weight: bold;
+    top: 102px;
+}
+
+a#allargacommedia {
+    text-decoration: none;
+    color: rgba(181, 94, 94,1);
+}
+
+
+
+
+#testocommedia_container {
+    height: 60%;
+    position: relative;
+    transition-duration: 1s;
+	overflow-y: scroll;
+}
+
+
+#testocommedia_container.alto {
+    height: 93%!important;
+}
+
+
+#testocommedia_container.chiuso {
+    height: 10%;
+}
+
+
+#testocommedia table{
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 1.5em;
+    font-size: 1.3em;
+	width:100%;
+
+}
+
+#testocommedia table tr td{
+	vertical-align:bottom;
+	cursor:default;
+}
+
+
+#testocommedia table tr td:first-child {
+    color: rgba(181, 94, 94,0);
+    transition-duration: 1s;
+    font-family: monospace;
+    width: 5%;
+}
+
+#testocommedia table tr.numerovisibile td:first-child{
+	color:rgba(181, 94, 94,1);
+}
+
+
+	
+#testocommedia tr:nth-child(3n +1) td{
+	height: 70px;
+}
+
+
+#tentativi {
+    background-image: url(../img/Book-Page-horizontal.png);
+    background-position: center top;
+    background-repeat: repeat-x;
+	
+    position: absolute;
+	overflow:hidden;
+	
+    height: 35%;
+    width: 100%;
+    bottom: 0;
+	
+	transition-duration: 1s;
+}
+
+
+#tentativi.esteso {
+    height: 83%;
+}
+
+
+#tentativi.chiuso {
+	height: 0%!important;	
+}
+
+
+#tentativi_inside{
+	
+	height: 100%;
+	
+    margin: 0 auto;
+	position: relative;
+	
+    width: 720px;
+	padding: 0px 60px 0px 60px;
+}
+
+
+#comanditentativi {
+    font-family: sans-serif;
+    position: absolute;
+    right: 50%;
+    font-size: 44px;
+    font-weight: bold;
+    top: 53px;
+    margin-right: -405px;
+}
+
+a#allargatentativi {
+    text-decoration: none;
+    color: rgba(181, 94, 94,1);
+}
+
+
+#testotentativi_container {
+    top: 38px;
+    height: calc(100% - 35px);
+    position: relative;
+    overflow-y: scroll;
+}
+
+
+#testotentativi table {
+	font-family: 'La Belle Aurore', cursive;
+    line-height: 1.5em;
+    font-size: 1.6em;
+	width: 100%;
+	
+}
+
+#testotentativi table tr td:first-child {
+    width: 5%;
+	color:rgba(181, 94, 94,1);
+	font-family: monospace;
+}
+
+
+input#inputverso {
+    background-color: transparent;
+    border: none;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 1em;
+    width: 100%;
+}
+
+input:focus{
+    outline: none;
+	border:none;
+}
+
+input:hover {
+    outline: none;
+	border:none;}
+
+
+
+
+
+
+
+

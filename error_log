@@ -1,0 +1,2 @@
+[07-May-2017 13:50:55 UTC] PHP Fatal error:  Call to undefined function apache_get_version() in /home/fablabpa/public_html/sviluppo/leobarbaro/cuoiaietta/index.php on line 43
+[07-May-2017 13:52:46 UTC] PHP Fatal error:  Call to undefined function apache_get_version() in /home/fablabpa/public_html/sviluppo/leobarbaro/cuoiaietta/index.php on line 46
