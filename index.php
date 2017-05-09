@@ -16,17 +16,20 @@ Template Name: Cuoiaietta
 
 </head>
 
-<body>
+<body class="tentativi_normal">
 
     <nav id = "testata">
 
 		<div id = "librotoggle">
+        &#9636;
         </div>
         
         <div id = "titolo">
+        La Divina Cuoiaia
         </div>
         
         <div id = "dantetoggle">
+        &#9785;
         </div>
         
     </nav>
@@ -91,15 +94,7 @@ Template Name: Cuoiaietta
             
             </div>
         
-        </div>
-        
-        
-        <nav id = "comandicommedia">
-        	<a href="#" id = "allargacommedia">
-            	&#8691;
-            </a>
-        </nav>
-        
+        </div>        
         
 	</section>
     
@@ -114,7 +109,9 @@ Template Name: Cuoiaietta
                 
                     <table>
                     
-                    <tr><td></td><td><input id="inputverso" value="inserisci testo"></td></tr>
+                    <tr><td></td><td><input id="inputverso" value="il nuovo verso..."></td></tr>
+                    
+                    
                     <tr><td>23</td><td>adipiscing elit. Aenean commodo ligula eget dolor.</td></tr>
                     <tr><td>13</td><td>Aenean massa. Cum sociis natoque penatibus</td></tr>
                   <tr><td>11</td><td>et magnis dis parturient montes, nascetur.</td></tr>
@@ -142,10 +139,14 @@ Template Name: Cuoiaietta
     
         </div>
 
-        <nav id = "comanditentativi">
-            <a href="#" id = "allargatentativi">
-                &#8691;
+        <nav id = "comandivista">
+            <a href="#" id = "alza">
+                &#8682;
             </a>
+            <br>
+        	<a href="#" id = "abbassa">
+            	&#8681;
+            </a> 
         </nav>
     
 
@@ -153,26 +154,31 @@ Template Name: Cuoiaietta
         
     
     <nav id = "menulibro">
-    
             <table>
-            
             <tbody>
-
 			<tr><td>&#10084;</td><td>Statistiche</td></tr>
             <tr><td>&#10047;</td><td>Sfide</td></tr>
             <tr><td>&#9733;</td><td>Progetti</td></tr>
           	<tr><td>&#9774;</td><td>Cazzi</td></tr>
             <tr><td>&#9873;</td><td>Abauti</td></tr>
-            
             </tbody>
-            
             </table>    
-    
     </nav>
 
 
     <nav id = "menudante">
+            <table>
+            <tbody>
+			<tr><td>Profilo</td><td>&#10084;</td></tr>
+            <tr><td>Versi</td><td>&#10047;</td></tr>
+            <tr><td>Notifiche</td><td>&#9733;</td></tr>
+          	<tr><td>Cose</td><td>&#9774;</td></tr>
+            <tr><td>Amici</td><td>&#9873;</td></tr>
+            </tbody>
+            </table>    
     </nav>
+    
+    
 </body>
 
 </html>

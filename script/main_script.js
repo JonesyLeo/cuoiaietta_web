@@ -15,55 +15,61 @@ $(document).ready(function(e) {
 	
 	
 	
-	$("#allargacommedia").click( function(){
+	$("#alza").click( function(){
 	
-		if( $("#testocommedia_container").hasClass("alto") ){
-			$("#testocommedia_container").removeClass("alto");
-			
-			$("#testocommedia_container").animate({ scrollTop: $("#testocommedia").height() }, 1100);
-			
-			$("#tentativi").removeClass("chiuso");
-			$(this).html("&#8691;");
+		if( $("body").hasClass("tentativi_full") ){
+			// already full
 		}
-		else {
-			$("#testocommedia_container").addClass("alto");
-			$("#tentativi").addClass("chiuso");
-			$(this).html("&#8686;");
+		else if( $("body").hasClass("tentativi_normal") ){
+			$("body").removeClass("tentativi_normal").addClass("tentativi_full")
+		}
+		else if( $("body").hasClass("tentativi_closed") ){
+			$("body").removeClass("tentativi_closed").addClass("tentativi_normal")
 		}
 		
+		// scroll all'ultima riga
+		$("#testocommedia_container").animate({ scrollTop: $("#testocommedia").height() }, 1100);
+		
+
 	});
 	
 	
-	$("#allargatentativi").click( function(){
+	$("#abbassa").click( function(){
 	
-		if( $("#tentativi").hasClass("esteso") ){
-			$("#tentativi").removeClass("esteso");
-			
-//			$("#testocommedia_container").animate({ scrollTop: $("#testocommedia").height() }, 1100);
-			
-			$("#testocommedia_container").removeClass("chiuso");
-			$(this).html("&#8691;");
+		if( $("body").hasClass("tentativi_full") ){
+			$("body").removeClass("tentativi_full").addClass("tentativi_normal")
 		}
-		else {
-			$("#tentativi").addClass("esteso");
-			$("#testocommedia_container").addClass("chiuso");
-			$(this).html("&#8686;");
+		else if( $("body").hasClass("tentativi_normal") ){
+			$("body").removeClass("tentativi_normal").addClass("tentativi_closed")
 		}
-		
+		else if( $("body").hasClass("tentativi_closed") ){
+			// already closed
+		}
+
+	});	
+	
+	
+	$("#librotoggle").on("click", function () {
+	   $("#menulibro").toggleClass("aperto");
 	});
 	
+	$("#dantetoggle").on("click", function () {
+	   $("#menudante").toggleClass("aperto");
+	});	
 	
 	
-	$("#inputverso").keyup(function(e) {
-        
-        
+	
+	$("#inputverso").keyup(function(e) { 
+		
 		$("#testocommedia_container").animate({ scrollTop: $("#testocommedia").height() }, 0);
-		
 		$("#nuovoverso").text( $(this).val() );
 		
-    });
+    }).on("click", function () {
+	   
+	   $(this).select();
 	
-	
+	});
+		
 	
 	
 

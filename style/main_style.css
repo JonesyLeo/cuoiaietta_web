@@ -5,6 +5,9 @@
 
 
 body{
+	
+	overflow:hidden;
+	
 	margin:0;
 	
 	position:relative;
@@ -32,20 +35,31 @@ body{
 	
 }
 
-
-
-#librotoggle, #dantetoggle{
-	
-	height:70px;
-	width: 70px;
-	background-color:rgba(255,255,255,0.4);
-	border: 2px solid #333;	
-	position: absolute;
-	border-radius:6px;
+#titolo {
+    text-align: center;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffffcc;
+    padding-top: 16px;
+    font-size: 2.5em;
 }
 
 
+	
+#librotoggle, #dantetoggle {
+    height: 70px;
+    width: 70px;
+    /* background-color: rgba(255,255,255,0.4); */
+    /* border: 2px solid #333; */
+    position: absolute;
+    /* border-radius: 6px; */
+    text-align: center;
+    color: #ffffcc;
+    font-weight: bold;
+    font-size: 54px;
+	
+	cursor:pointer;
 
+}
 
 #librotoggle{
 	left: 20px;
@@ -59,36 +73,67 @@ body{
 }
 
 
+
+
+
+
 #menulibro, #menudante{
 	height:400px;
 	width: 200px;
 	position: absolute;
 	transition-duration:0.7s;
 	top:90px;
-	padding: 21px;
-	line-height:2em;
+	padding: 20px;
+	line-height:1em;
 }
 
 #menulibro table, #menudante table{
 	color:#FFC;
 	font-size:1.3em;
 	font-family:'Inknut Antiqua', serif;
+	
+	cursor:pointer;
 }
 
 
+
 #menulibro{
+	left:-240px;
+}
+
+#menulibro.aperto{
 	left:0px;
+}
+
+#menulibro table tr td:first-child{
+	width: 50px;
+    font-size: 1.7em;
+	line-height:1em;
 }
 
 
 #menudante{
+	right:-240px;
+}
+
+#menudante.aperto{
 	right:0px;
 }
 
 
 
+#menudante table{
+	text-align:right;
+	margin-right: 0px;
+    margin-left: auto;
+}
 
 
+#menudante table tr td:last-child{
+	width: 50px;
+    font-size: 1.7em;
+	line-height:1em;
+}
 
 
 #commedia {
@@ -108,22 +153,6 @@ body{
 }
 
 
-#comandicommedia {
-    font-family: sans-serif;
-    position: absolute;
-    right: 16px;
-    font-size: 44px;
-    font-weight: bold;
-    top: 102px;
-}
-
-a#allargacommedia {
-    text-decoration: none;
-    color: rgba(181, 94, 94,1);
-}
-
-
-
 
 #testocommedia_container {
     height: 60%;
@@ -133,14 +162,22 @@ a#allargacommedia {
 }
 
 
-#testocommedia_container.alto {
-    height: 93%!important;
-}
-
-
-#testocommedia_container.chiuso {
+body.tentativi_full #testocommedia_container {
     height: 10%;
 }
+
+
+body.tentativi_normal #testocommedia_container {
+    height: 60%;
+}
+
+
+body.tentativi_closed #testocommedia_container {
+    height: 93%;
+}
+
+
+
 
 
 #testocommedia table{
@@ -181,8 +218,7 @@ a#allargacommedia {
     background-repeat: repeat-x;
 	
     position: absolute;
-	overflow:hidden;
-	
+		
     height: 35%;
     width: 100%;
     bottom: 0;
@@ -191,13 +227,19 @@ a#allargacommedia {
 }
 
 
-#tentativi.esteso {
+
+body.tentativi_full #tentativi {
     height: 83%;
 }
 
 
-#tentativi.chiuso {
-	height: 0%!important;	
+body.tentativi_normal #tentativi {
+    height: 35%;
+}
+
+
+body.tentativi_closed #tentativi {
+	height: 0%;	
 }
 
 
@@ -213,19 +255,21 @@ a#allargacommedia {
 }
 
 
-#comanditentativi {
+#comandivista {
     font-family: sans-serif;
     position: absolute;
     right: 50%;
     font-size: 44px;
     font-weight: bold;
-    top: 53px;
-    margin-right: -405px;
+    top: -90px;
+    margin-right: -412px;
 }
 
-a#allargatentativi {
+
+a#alza, a#abbassa {
     text-decoration: none;
     color: rgba(181, 94, 94,1);
+    line-height: 106px;
 }
 
 
